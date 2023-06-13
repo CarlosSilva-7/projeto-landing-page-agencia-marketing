@@ -1,0 +1,294 @@
+/*INICIO ESTILIZACAO GERAL*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+html, body{
+    width: 100%;
+    /*definir é muito importante pois na div.center 
+    a baixo, eu consigo um design totalmente responsivo
+    e consigo trabalhar muito melhor que com px
+    nesse exemplo digo que, div.center terá 95% da
+    capacidade de 100% do meu corpo todo...*/
+}
+div.center{
+    width: 90%;
+    margin: 0 auto;
+}
+/*FIM ESTILIZACAO GERAL*/
+
+/*INICIO DO HEADER*/
+header{
+    width: 100%;
+    height: 90px;
+    background-color: #242445;
+}
+header img{
+    margin-top: 31px;
+    width: 150px;
+}
+/*FIM DO HEADER*/
+
+/*INICIO DO BANNER*/
+.banner{
+    width: 100%;
+    height: 557px;
+    background-image: url(/images/header_bg.png);
+    background-size: cover;
+    background-position: center;
+}
+.banner > .center{
+    height: 100%;
+}
+/*FIM DO BANNER*/
+
+/*INICIO DO BANNER-TOPICOS*/
+.banner-topicos{
+    position: relative;
+    top: calc(50% - 150px);
+    width: 500px;
+    height: 300px;
+    background-color: rgb(58, 58, 108, 0.4);
+    display: inline-block;
+}
+ul{
+    padding: 10% 7%;
+}
+ul li{
+    color:rgb(239, 239, 239);
+    margin-top: 4%; 
+    font-weight: 500;
+    font-size: 17px;
+}
+/*FIM DO BANNER-TOPICOS*/
+
+/*INICIO DO FORMULARIO*/
+.form{
+    float: right ;
+    width: 400px;
+    height: calc(100% + 30px);
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 15px;
+    border: 15px solid #ccc;
+    padding: 10px;  
+}
+.form h2{
+    text-align: center;
+    font-size: 22px;
+    color: rgb(131, 131, 131);
+    font-weight: normal;
+    padding-bottom: 6%;
+}
+.div-input .input{
+    width: 95%;
+    height: 40px;
+    padding: 5px;
+}
+form label{
+    color: rgb(131, 131, 131);
+}
+.div-input{
+    margin-top:6% ;
+}
+form h4{
+    margin-top: 10%;
+    color: rgb(131, 131, 131);
+    font-weight: normal;
+}
+form button{
+    background-color: #242445;
+    border: none;
+    width: 300px;
+    height: 56px;
+    margin-top: 32%;
+    color: white;
+    font-weight: 900;
+    font-size: 25px;
+    border-radius: 4px;
+    cursor: pointer; 
+}
+form button:hover{
+    background-color: #3a3a6c;
+}
+div.div-button{
+    text-align: center;
+}
+/*FIM DO FORMULARIO*/
+
+/*INICIO SECTION SOBRE*/
+.about{
+    height: 100% !important;
+}
+.text-container{
+    display: inline-block;
+    text-align:center ;
+    margin-top: 1%;
+    width: 75%;
+    height: 90%;
+}
+section.about{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(235, 235, 235);
+    text-align:center ;
+ 
+    
+}
+.text-container p{
+    color: rgb(72, 72, 72);
+    font-size: 19px;
+    margin-bottom: 11%;
+    
+}
+.text-container h2{
+    color: rgb(39, 39, 39);
+    font-size: 35px;
+    margin-bottom: 3%;
+}
+.beneficios > .center{
+    height: 400px;
+}
+.arrow{
+    width: 40px;
+    height: 40px;
+    background-image: url(/images/arrow.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 20px;
+    margin: 0 auto;
+}
+/*FIM SECTION SOBRE*/
+
+/*INICIO SECTION SECTION-BENEFICIO*/
+.section-beneficio{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.section-beneficio .center{
+    text-align: center;
+}
+.section-beneficio h2{
+    color: #472663;
+    margin: 3% 0 8%;
+}
+.beneficio-container{
+    margin: 5% 0 7%;
+    height: 90%;
+    text-align: center;
+}
+.beneficio{
+    height: 80%;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    margin: 0 1%;
+}
+.beneficio h3{
+    padding: 3% 0;
+    color: rgb(39, 39, 39);
+}
+.beneficio p{
+    color: rgb(72, 72, 72);
+
+}
+
+/*FIM SECTION SECTION-BENEFICIO*/
+
+footer{
+    border-top:1px solid #ccc;
+    padding: 2% 0;
+    text-align: center;
+    color: rgb(39, 39, 39);
+}
+footer p:last-child{
+    margin-top: 1%;
+}
+/*INICIO MEDIA QUERIES*/
+
+@media screen and (max-width:1024px) {
+    header{
+        height: 75px;
+    }
+    header img{
+        margin-top: 25px;
+        width: 120px;
+    }
+    .form{
+        width: 350px;
+        border: 8px solid #ccc;
+        height: calc(100% - 30px);
+        bottom: -15px;
+    }
+    .banner-topicos{
+        width: 450px;
+    }
+    form button{
+        width: 94%;
+        margin-top: 20%;
+        font-weight: 700;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:930px) {
+    header{
+        text-align: center;
+    }
+    .banner{
+        float:none;
+        display: inline-block;
+        height: auto;
+        padding-bottom: 5%;
+        background-position: left;
+    }
+    .banner-topicos{
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 5%;
+        margin: 8% 0 5%;
+    }
+    ul{
+        padding: 3% 6%;
+    }
+    .form{
+        position:static;
+        float: none ;
+        width: 90%;
+        height: 465px;
+        margin: 0 auto;
+    }
+    .form h4{
+        margin-top: 5%;
+    }
+
+    form button{
+        width: 65%;
+        margin-top: 7%;
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .text-container p{
+        color: rgb(72, 72, 72);
+        font-size: 19px;
+        margin-bottom: 11%;
+        
+    }
+    .text-container h2{
+        color: rgb(39, 39, 39);
+        font-size: 35px;
+        margin: 5% 0;
+    }
+    .beneficio{
+        width: 80%;
+        margin-bottom: 4%;
+    }
+    .beneficio:last-child{
+        margin-bottom: 0;
+    }
+}
+/*FIM MEDIA QUERIES*/
